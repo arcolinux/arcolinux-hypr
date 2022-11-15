@@ -38,7 +38,7 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop
 xsetroot -cursor_name left_ptr &
 
-conky -c $HOME/.config/hypr/system-overview &
+#run conky -c $HOME/.config/hypr/system-overview &
 run variety &
 run nm-applet &
 run pamac-tray &
