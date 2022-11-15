@@ -58,4 +58,14 @@ run volumeicon &
 #run insync start &
 #run discord &
 #run spotify &
-#run atom &
+
+#mainbar
+index=0
+monitors=($(polybar -m | sed s/:.*//))
+leftwm-state -q -n -t "$SCRIPTPATH"/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
+do
+  barname="mainbar$index"
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybartop.config $barname &> /dev/null &
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybarbottom.config $barname &> /dev/null &
+  let index=index+1
+done
