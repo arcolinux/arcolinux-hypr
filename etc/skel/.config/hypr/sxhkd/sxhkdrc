@@ -60,7 +60,7 @@ super + F12
 
 #Atom
 super + e
-    atom
+    code
 
 #Browser
 super + w
