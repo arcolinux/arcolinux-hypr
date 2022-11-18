@@ -429,8 +429,8 @@ ctrl + alt + o
 
 
 #Reload hypr
-#super + shift + r
-#	~/.config/hypr/...
+super + shift + r
+	touch ~/.config/hypr/hypr.conf
 
 
 #################################################################
